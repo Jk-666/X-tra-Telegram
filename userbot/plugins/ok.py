@@ -2,7 +2,7 @@
 
 Available Commands:
 
-.ok"""
+.dio"""
 
 from telethon import events
 
@@ -17,27 +17,27 @@ async def _(event):
     animation_interval = 0.00001
     animation_ttl = range(0, 90)
     input_str = event.pattern_match.group(1)
-    if input_str == "ok":
+    if input_str == "dio":
         await event.edit(input_str)
         animation_chars = [
-            "F",
-            "U",
-            "C",
-            "K",
-            "Y",
-            "O",
-            "U",
-            "B",
-            "C",
-            "FK",
-            "UU",
-            "FCUK",
-            "UOY",
-            "C",
-            "F",
-            "Y",
-            "F",
-            "Ok Sar 😇"
+            "DIO CANE🔴",
+            "DIO CANE🔵",
+            "DIO CANE🔴",
+            "DIO CANE🔵",
+            "DIO CANE🔴",
+            "DIO CANE🔵",
+            "DIO CANE🔴",
+            "DIO CANE🔵",
+            "DIO CANE🔴",
+            "DIO CANE🔵",
+            "DIO CANE🔴",
+            "DIO CANE🔵",
+            "DIO CANE🔴",
+            "DIO CANE🔵",
+            "DIO CANE🔴",
+            "DIO CANE🔵",
+            "DIO CANE🔴",
+            "DIO CANE🔵"
         ]
 
         for i in animation_ttl:
