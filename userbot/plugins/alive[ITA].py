@@ -12,7 +12,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**Nessun nome setato.** [Check
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.edit("Userbot ✅ONLINE\n\n"
-                     "`Versione Telethon: 6.9.0\nPython: 3.7.3\n`"
+                     "`Versione Telethon: 6.9.0\nPython: 3.7.3\n Versione JK🦄: 0.3.beta\n`"
                      # Don't change this else you a TikTok loser, Son of Jinping. Add your own.
                      "`Userbot creato da:` [SnapDragon](tg://user?id=719877937), @anubisxx\n"
                      "`Tradotto da:` @xXjk6Xx, @ImSoJoker
