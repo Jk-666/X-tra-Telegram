@@ -45,9 +45,9 @@ async def _(event):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
-            await borg.send_message(event.chat_id, f"**I shall be Going afk!** __because ~ {reason}__")
+            await borg.send_message(event.chat_id, f"**🤖Sono afk!** __perche~ {reason}__")
         else:
-            await borg.send_message(event.chat_id, f"**I am Going afk!**")
+            await borg.send_message(event.chat_id, f"**🤖 Sono afk! se avete bisogno di me taggatemi.**")
         await asyncio.sleep(5)
         await event.delete()
         try:
@@ -72,7 +72,7 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
-        shite = await borg.send_message(event.chat_id, "__Back alive!__\n**No Longer afk.**\n `Was afk for:``" + total_afk_time + "`")
+        shite = await borg.send_message(event.chat_id, "__Sono ritornato in vita!__\n**N.**\n `Sono stato afk per:``" + total_afk_time + "`")
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
@@ -109,7 +109,7 @@ async def on_afk(event):
     afk_end = back_alivee.replace(microsecond=0)
     if afk_start != {}:
         total_afk_time = str((afk_end - afk_start))
-    afk_since = "**a while ago**"
+    afk_since = "**un po 'di tempo fa**"
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
         # userbot's should not reply to other userbot's
@@ -128,7 +128,7 @@ async def on_afk(event):
             time %= 60
             seconds = time
             if days == 1:
-                afk_since = "**Yesterday**"
+                afk_since = "**Ieri**"
             elif days > 1:
                 if days > 6:
                     date = now + \
@@ -139,16 +139,16 @@ async def on_afk(event):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime('%A')
             elif hours > 1:
-                afk_since = f"`{int(hours)}h{int(minutes)}m` **ago**"
+                afk_since = f"`{int(hours)}h{int(minutes)}m` **fa**"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}m{int(seconds)}s` **ago**"
+                afk_since = f"`{int(minutes)}m{int(seconds)}s` **fa**"
             else:
-                afk_since = f"`{int(seconds)}s` **ago**"
+                afk_since = f"`{int(seconds)}s` **fa**"
         msg = None
-        message_to_reply = f"__My Master Has Been Gone For__ `{total_afk_time}`\nWhere He Is: ~~ONLY GOD KNOWS~~ " + \
-            f"\n\n__I promise I'll back in a few light years__\n**REASON**: {reason}" \
+        message_to_reply = f"__Il mio maestro è andato via per__ `{total_afk_time}`\nDov'è lui adesso? : ~~SOLO DIO LO SA~~ " + \
+            f"\n\n__Prometto che torno tra pochi anni__\n**MOTIVO**: {reason}" \
             if reason \
-            else f"**Heya!**\n__I am currently unavailable. Since when, you ask? For {total_afk_time} I guess.__\n\nWhen will I be back? ~~Soon~~ __Whenever I feel like it__**( ಠ ʖ̯ ಠ)**  "
+            else f"**Heila!**\n__In questo momento non sono disponibile. Per quanto tempo? Per {total_afk_time} suppongo.__\n\nQuando tornerò? ~~Presto~~ __Quando avro voglia__**( ಠ ʖ̯ ಠ)**  "
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
