@@ -15,6 +15,8 @@ async def amireallyalive(alive):
                      "`Versione Telethon: 6.9.0\nPython: 3.7.3\n Versione JK🦄: 0.3.beta\n`"
                      # Don't change this else you a TikTok loser, Son of Jinping. Add your own.
                      "`Userbot creato da:` [SnapDragon](tg://user?id=719877937), @anubisxx\n"
-                     "`Tradotto da:` @xXjk6Xx, @ImSoJoker
+                     "`Tradotto da:` @xXjk6Xx, @ImSoJoker"
+                     "[Segnala un bug!⚠](t.me/Userbot_XTRA_ITA)"
+                     "[Voglio un userbot anchio!❤](t.me/xXjk6Xx)
                      f"`Userbot di:` {DEFAULTUSER}\n\n"
                      
