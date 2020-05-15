@@ -17,6 +17,6 @@ async def amireallyalive(alive):
                      "`Userbot creato da:` [SnapDragon](tg://user?id=719877937), @anubisxx\n"
                      "`Tradotto da:` @xXjk6Xx, @ImSoJoker"
                      "[Segnala un bug!⚠](t.me/Userbot_XTRA_ITA)"
-                     "[Voglio un userbot anchio!❤](t.me/xXjk6Xx)
+                     "[Voglio un userbot anchio!](t.me/xXjk6Xx)" 
                      f"`Userbot di:` {DEFAULTUSER}\n\n"
                      
