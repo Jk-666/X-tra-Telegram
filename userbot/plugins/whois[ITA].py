@@ -44,18 +44,18 @@ async def _(event):
     try:
         dc_id, location = get_input_location(replied_user.profile_photo)
     except Exception as e:
-        dc_id = "Need a Profile Picture to check **this**"
+        dc_id = "Serve una foto profilo controllare il**datacenter**"
         location = str(e)
-    caption = """Extracted Userdata From Anubis' DATABASE
+    caption = """**Extracted Userdata From Telegram**
 ID: <code>{}</code>
-Rendi's Name: <a href='tg://user?id={}'>{}</a>
+Nome: <a href='tg://user?id={}'>{}</a>
 Bio: {}
-DC ID: {}
-Number of PPs: {}
-Restricted? : {}
-Verified gey: {}
+DC: {}
+N° foto profilo: {}
+Limitato? : {}
+Verificato?: {}
 Bot(nub): {}
-Groups in Common with this gey: {}
+Gruppi in comune: {}
 """.format(
         user_id,
         user_id,
