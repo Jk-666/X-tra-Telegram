@@ -20,16 +20,15 @@ async def cmd_list(event):
                 await event.edit(string)
         elif input_str:
             if input_str in CMD_LIST:
-                string = "Commands found in {}:\n".format(input_str)
+                string = "Commandi trovati in {}:\n".format(input_str)
                 for i in CMD_LIST[input_str]:
                     string += "    " + i
                     string += "\n"
                 await event.edit(string)
             else:
-                await event.edit(input_str + " is not a valid plugin!")
+                await event.edit(input_str + " non è un plugin valido!")
         else:
-            help_string = """Userbot Helper.. Provided by @A_Dark_Princ3 \n[Check out this dope af website](https://www.moddingunited.xyz/) \n
-`Userbot Helper to reveal all the commands`\n__Do .help plugin_name for commands, in case popup doesn't appear.__"""
+            help_string = """**Lista dei plugin installati sul userbot**.. Fornito da @Userbot_XTRA_ITA \n[Entra in questo canale per altri plugin](https://www.t.me/Plugins_UB)\n__Scrivi .help *nome plugin* per vedere piu informazioni sul plugin.__"""
             results = await bot.inline_query(  # pylint:disable=E0602
                 tgbotusername,
                 help_string
